@@ -14,7 +14,7 @@ then
 	done
 elif [ $1 = "--help" ] || [ $1 = "-h" ]
 then
-	echo --date - wyświetla obecną datę
-	echo --logs [liczba] - towrzy tworzy plik log.txt w ilości [liczba]
-	echo --help - wyświetla pomoc
+	echo -d, --date - wyświetla obecną datę
+	echo -l, --logs [liczba] - towrzy tworzy plik log.txt w ilości [liczba]
+	echo -h, --help - wyświetla pomoc
 fi
