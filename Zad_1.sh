@@ -13,4 +13,9 @@ then
 		date >> log$x.txt
 		x=$((x+1))
 	done
+elif [ $1 = "--help" ]
+then
+	echo --date - wyświetla obecną datę
+	echo --logs [liczba] - towrzy tworzy plik log.txt w ilości [liczba]
+	echo --help - wyświetla pomoc
 fi
