@@ -5,6 +5,7 @@ then
 	date
 elif [ $1 = "--logs" ] || [ $1 = "-l" ]
 then
+	x=1
 	while [ $x -le $2 ]
 	do
 		echo log$x > log$x.txt
@@ -12,6 +13,26 @@ then
 		date >> log$x.txt
 		x=$((x+1))
 	done
+elif [ $1 = "--error" ] || [ $1 = "-e" ]
+then
+	x=1
+	if [ -z $2 ]
+	then
+		while [ $x -le $2 ]
+		do
+			echo error$x > error$x.txt
+			echo Zad_1.sh >> error$x.txt
+			date >> error$x.txt
+			x=$((x+1))
+		done
+	elif
+		while [ $x -le 100 ]
+		do
+			echo error$x > error$x.txt
+			echo Zad_1.sh >> error$x.txt
+			date >> error$x.txt
+			x=$((x+1))
+		done
 elif [ $1 = "--help" ] || [ $1 = "-h" ]
 then
 	echo -d, --date - wyświetla obecną datę
