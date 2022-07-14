@@ -1,11 +1,10 @@
 #!/bin/bash
 
-if [ $1 = "--date" ]
+if [ $1 = "--date" ] || [ $1 = "-d" ]
 then
 	date
-elif [ $1 = "--logs" ]
+elif [ $1 = "--logs" ] || [ $1 = "-l" ]
 then
-	x=1
 	while [ $x -le $2 ]
 	do
 		echo log$x > log$x.txt
@@ -13,7 +12,7 @@ then
 		date >> log$x.txt
 		x=$((x+1))
 	done
-elif [ $1 = "--help" ]
+elif [ $1 = "--help" ] || [ $1 = "-h" ]
 then
 	echo --date - wyświetla obecną datę
 	echo --logs [liczba] - towrzy tworzy plik log.txt w ilości [liczba]
