@@ -36,6 +36,7 @@ then
 elif [ $1 = "--help" ] || [ $1 = "-h" ]
 then
 	echo -d, --date - wyświetla obecną datę
-	echo -l, --logs [liczba] - towrzy tworzy plik log.txt w ilości [liczba]
+	echo -l, --logs [liczba] - tworzy plik log.txt w ilości [liczba]
 	echo -h, --help - wyświetla pomoc
+	echo -e, --error [liczba] - towrzy plik error.txt w ilości [liczba]
 fi
